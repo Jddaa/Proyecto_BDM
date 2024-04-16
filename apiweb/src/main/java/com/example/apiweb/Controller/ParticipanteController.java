@@ -16,7 +16,7 @@ import com.example.apiweb.Service.IParticipanteService;
 public class ParticipanteController {
     @Autowired
     IParticipanteService participanteService;
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<String> crearParticipante(@RequestBody ParticipanteModel participante){
         participanteService.agregarParticipante(participante);
         return new ResponseEntity<String>(participanteService.agregarParticipante(participante),HttpStatus.OK);
