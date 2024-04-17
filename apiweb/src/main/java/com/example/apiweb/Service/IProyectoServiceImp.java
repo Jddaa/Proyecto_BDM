@@ -12,6 +12,6 @@ public class IProyectoServiceImp implements IProyectoService{
     @Override 
     public String agregarProyecto(ProyectoModel proyecto) {
         proyectoRepository.save(proyecto);
-        return "El Cliente con la id " + proyecto.getCliente().getIdCliente() + " fue guardado con exito";
+        return "El Proyecto con la id " + proyecto.getIdProyecto() + " fue guardado con exito";
     }
 }
