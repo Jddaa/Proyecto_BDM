@@ -1,5 +1,7 @@
 package com.example.apiweb.Model;
 
+import java.math.BigInteger;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -16,7 +18,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TelefonoModel {
     @Id
-    private Integer numTelefono;
+    private BigInteger numTelefono;
     @ManyToOne
     @JoinColumn(name = "idParticipante")
     private ParticipanteModel participante;

@@ -1,10 +1,12 @@
 package com.example.apiweb.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.apiweb.Model.ProyectoModel;
 import com.example.apiweb.Repository.IProyectoRepository;
 
+@Service
 public class IProyectoServiceImp implements IProyectoService{
     @Autowired
     IProyectoRepository proyectoRepository;

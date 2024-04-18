@@ -51,5 +51,15 @@ public class ParticipanteController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
     }
+    @PostMapping("/{id}")
+    public ResponseEntity<String> actualizarParticipantePorId(@PathVariable int id, @RequestBody ParticipanteModel detallesParticipante){
+        try{
+            String mensaje = participanteService.actualizarParticipante(id, detallesParticipante);
+            return ResponseEntity.ok(mensaje);
+        }catch(RecursoNoEncontradoException e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        }
+
+    }
 
 }
