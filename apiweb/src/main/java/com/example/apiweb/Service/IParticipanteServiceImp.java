@@ -55,9 +55,11 @@ public class IParticipanteServiceImp implements IParticipanteService{
                 participante.setIdParticipante(detallesparticipante.getIdParticipante());
             }
 
+            participanteRepository.save(participante);
+            return "Participante Actualizado";
+        }else{
+            return "Error, no se encontro al usuario con el id" + idParticipante;
         }
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'actualizarParticipante'");
     }
     
 }
