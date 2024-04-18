@@ -11,7 +11,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table (name = "Cliente")
+@Table (name = "IdeaCreativa")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor 
@@ -21,9 +21,10 @@ public class IdeaModel {
     private Integer idIdea;
     private String contenido;
     @ManyToOne
-    @JoinColumn(name = "IdParticipante")
+    @JoinColumn(name = "idParticipante")
     private ParticipanteModel participante;
     @ManyToOne
     @JoinColumn(name = "idProyecto")
     private ProyectoModel proyecto;
+    private String dirigida;
 }

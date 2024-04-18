@@ -15,7 +15,7 @@ public class IClienteServiceImp implements IClienteService{
     @Override 
     public String agregarCliente(ClienteModel cliente) {
         clienteRepository.save(cliente);
-        return "El participante con la id " + cliente.getIdCliente() + " fue guardado con exito";
+        return "El cliente con la id " + cliente.getIdCliente() + " fue guardado con exito";
     }
 
     

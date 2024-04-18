@@ -42,7 +42,7 @@ public class ParticipanteController {
         List<ParticipanteModel> participantes = participanteService.listarParticipantes();
         return new ResponseEntity<List<ParticipanteModel>>(participantes,HttpStatus.OK);
     }
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarParticipante(@PathVariable int id){
         try{
             String mensaje = participanteService.eliminarParticipantePorId(id);
