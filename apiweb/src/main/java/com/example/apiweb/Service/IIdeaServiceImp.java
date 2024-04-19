@@ -62,5 +62,13 @@ public class IIdeaServiceImp implements IIdeaService{
             return "Error, no se encontro la idea con el id" + idIdea;
         }
     }
+    @Override
+    public List<IdeaModel> mostrarIdeasPorDir(){
+        return ideaRepository.buscarIdeasPorDir();
+    }
+    @Override
+    public List<IdeaModel> mostrarIdeasConContenido(){
+        return ideaRepository.buscarIdeasConContenido();
+    }
     
 }

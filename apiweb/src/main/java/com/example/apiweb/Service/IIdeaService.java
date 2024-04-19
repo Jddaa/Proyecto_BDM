@@ -10,4 +10,6 @@ public interface IIdeaService {
     List<IdeaModel>listarIdeas();
     String eliminarIdeaPorId(int idIdea);
     String actualizarIdea(int idIdea, IdeaModel detallesIdea);
+    List<IdeaModel> mostrarIdeasPorDir();
+    List<IdeaModel> mostrarIdeasConContenido();
 }

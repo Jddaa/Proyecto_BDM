@@ -61,5 +61,15 @@ public class IdeaController {
         }
 
     }
+    @GetMapping("/dirigida")
+    public ResponseEntity<List<IdeaModel>> mostrarIdeasPorDir(){
+        List<IdeaModel> ideas = ideaService.mostrarIdeasPorDir();
+        return new ResponseEntity<List<IdeaModel>>(ideas,HttpStatus.OK);
+    }
+    @GetMapping("/contenido")
+    public ResponseEntity<List<IdeaModel>> mostrarIdeasConContenido(){
+        List<IdeaModel> ideas = ideaService.mostrarIdeasConContenido();
+        return new ResponseEntity<List<IdeaModel>>(ideas,HttpStatus.OK);
+    }
 
 }

@@ -64,4 +64,16 @@ public class IProyectoServiceImp implements IProyectoService{
     }else{
         return "Error, no se encontro el proyecto con el id" + idProyecto;
     }
-}}
+}
+
+    @Override
+    public List<ProyectoModel> mostrarProyectoExterno() {
+        return proyectoRepository.buscarProyectoExterno();
+    }
+
+    @Override
+    public List<ProyectoModel> mostrarProyectoInterno() {
+        return proyectoRepository.buscarProyectoInterno();
+    }
+    
+}

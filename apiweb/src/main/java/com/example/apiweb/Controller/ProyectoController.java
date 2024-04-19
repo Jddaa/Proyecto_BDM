@@ -61,4 +61,15 @@ public class ProyectoController {
         }
 
     }
+    @GetMapping("/proyectosExternos")
+    public ResponseEntity<List<ProyectoModel>> mostrarProyectoExterno(){
+        List<ProyectoModel> proyectos = proyectoService.mostrarProyectoExterno();
+        return new ResponseEntity<List<ProyectoModel>>(proyectos,HttpStatus.OK);
+    }
+    @GetMapping("/proyectosInternos")
+    public ResponseEntity<List<ProyectoModel>> mostrarProyectoInterno(){
+        List<ProyectoModel> proyectos = proyectoService.mostrarProyectoInterno();
+        return new ResponseEntity<List<ProyectoModel>>(proyectos,HttpStatus.OK);
+    }
+
 }

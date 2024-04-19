@@ -61,5 +61,9 @@ public class HaceParteController {
         }
 
     }
-    //No tiene actualizar porque no se puede modificar una primarykey.
+    @GetMapping("/perteneceMenorQueUno")
+    public ResponseEntity<List<HaceParteModel>> mostrarPerteneceMenorQueUno(){
+        List<HaceParteModel> participacion = haceParteService.mostrarPerteneceMenorQueUno();
+        return new ResponseEntity<List<HaceParteModel>>(participacion,HttpStatus.OK);
+    }
 }

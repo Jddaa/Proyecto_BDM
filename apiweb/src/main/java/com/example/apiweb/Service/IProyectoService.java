@@ -10,4 +10,6 @@ public interface IProyectoService {
     List<ProyectoModel>listarProyecto();
     String eliminarProyectoPorId(int idProyecto);
     String actualizarProyecto(int idProyecto, ProyectoModel detallesProyecto);
+    List<ProyectoModel> mostrarProyectoExterno();
+    List<ProyectoModel> mostrarProyectoInterno();
 } 

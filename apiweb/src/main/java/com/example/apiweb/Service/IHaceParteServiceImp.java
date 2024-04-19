@@ -47,5 +47,10 @@ public class IHaceParteServiceImp implements IHaceParteService{
        
         throw new UnsupportedOperationException("Unimplemented method 'actualizarParticipacion'");
     }
+
+    @Override
+    public List<HaceParteModel> mostrarPerteneceMenorQueUno() {
+        return haceParteRepository.buscarPerteneceMenorQueUno();
+    }
     
 }
