@@ -10,5 +10,6 @@ public interface IHaceParteService {
     List<HaceParteModel>listarParticipaciones();
     String eliminarParticipacionesPorId(int idHaceParte);
     String actualizarParticipacion(int idHaceParte, HaceParteModel detallesParticipacion);
-    List<HaceParteModel> mostrarPerteneceMenorQueUno();
+    List<HaceParteModel> mostrarSinFecha();
+    List<HaceParteModel> mostrarParticipantesProyectos();
 }

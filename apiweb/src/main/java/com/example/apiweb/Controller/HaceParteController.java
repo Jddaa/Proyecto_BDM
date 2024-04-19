@@ -61,9 +61,14 @@ public class HaceParteController {
         }
 
     }
-    @GetMapping("/perteneceMenorQueUno")
-    public ResponseEntity<List<HaceParteModel>> mostrarPerteneceMenorQueUno(){
-        List<HaceParteModel> participacion = haceParteService.mostrarPerteneceMenorQueUno();
+    @GetMapping("/sinFecha")
+    public ResponseEntity<List<HaceParteModel>> mostrarSinFecha(){
+        List<HaceParteModel> participacion = haceParteService.mostrarSinFecha();
+        return new ResponseEntity<List<HaceParteModel>>(participacion,HttpStatus.OK);
+    }
+    @GetMapping("/participantesProyectos")
+    public ResponseEntity<List<HaceParteModel>> mostrarParticipantesProyectos(){
+        List<HaceParteModel> participacion = haceParteService.mostrarParticipantesProyectos();
         return new ResponseEntity<List<HaceParteModel>>(participacion,HttpStatus.OK);
     }
 }

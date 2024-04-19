@@ -10,6 +10,7 @@ import com.example.apiweb.Exception.RecursoNoEncontradoException;
 import com.example.apiweb.Model.HaceParteModel;
 import com.example.apiweb.Repository.IHaceparteRepository;
 
+
 @Service
 public class IHaceParteServiceImp implements IHaceParteService{
 
@@ -49,8 +50,11 @@ public class IHaceParteServiceImp implements IHaceParteService{
     }
 
     @Override
-    public List<HaceParteModel> mostrarPerteneceMenorQueUno() {
-        return haceParteRepository.buscarPerteneceMenorQueUno();
+    public List<HaceParteModel> mostrarSinFecha() {
+        return haceParteRepository.buscarSinFecha();
     }
-    
+    @Override   
+    public List<HaceParteModel> mostrarParticipantesProyectos() {
+        return haceParteRepository.buscarParticipantesProyectos();
+    }
 }
