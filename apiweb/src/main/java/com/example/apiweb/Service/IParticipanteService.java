@@ -10,5 +10,6 @@ public interface IParticipanteService {
     List<ParticipanteModel>listarParticipantes();
     String eliminarParticipantePorId(int idParticipante);
     String actualizarParticipante(int idParticipante, ParticipanteModel detallesparticipante);
+    List<ParticipanteModel> mostrarInternoNoLider();
     //otras cosas
 }

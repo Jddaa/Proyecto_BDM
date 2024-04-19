@@ -30,19 +30,21 @@ public class IHaceParteServiceImp implements IHaceParteService{
 
     @Override
     public List<HaceParteModel> listarParticipaciones() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listarParticipaciones'");
+        
+        return haceParteRepository.findAll();
     }
 
     @Override
     public String eliminarParticipacionesPorId(int idHaceParte) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'eliminarParticipacionesPorId'");
+        
+        Optional<HaceParteModel> participacionRecuperada = haceParteRepository.findById(idHaceParte);
+        this.haceParteRepository.deleteById(idHaceParte);
+        return "La participación de ID " + participacionRecuperada.get().getIdFigura() + "fue eliminada con exito";
     }
 
     @Override
     public String actualizarParticipacion(int idHaceParte, HaceParteModel detallesParticipacion) {
-        // TODO Auto-generated method stub
+       
         throw new UnsupportedOperationException("Unimplemented method 'actualizarParticipacion'");
     }
     

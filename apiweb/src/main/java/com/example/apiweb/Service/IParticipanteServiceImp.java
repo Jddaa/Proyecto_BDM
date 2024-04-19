@@ -61,5 +61,9 @@ public class IParticipanteServiceImp implements IParticipanteService{
             return "Error, no se encontro al usuario con el id" + idParticipante;
         }
     }
+    @Override
+    public List<ParticipanteModel> mostrarInternoNoLider() {
+      return  this.participanteRepository.buscarInternoNoLider();
+    }
     
 }

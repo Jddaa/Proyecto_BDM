@@ -61,5 +61,10 @@ public class ParticipanteController {
         }
 
     }
+    @GetMapping("/Q1")
+    public ResponseEntity<List<ParticipanteModel>> participantesInternosNoLideres(){
+        List<ParticipanteModel> listaInternos = participanteService.mostrarInternoNoLider();
+        return new ResponseEntity <List<ParticipanteModel>>(listaInternos, HttpStatus.OK);
+    }
 
 }
