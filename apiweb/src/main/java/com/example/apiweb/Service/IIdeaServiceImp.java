@@ -28,6 +28,7 @@ public class IIdeaServiceImp implements IIdeaService{
     public List<IdeaModel> listarIdeas() {
         return ideaRepository.findAll();
     }
+    @SuppressWarnings("unused")
     @Override
     public String eliminarIdeaPorId(int idIdea) {
         Optional<IdeaModel> ideaRecuperada = ideaRepository.findById(idIdea);

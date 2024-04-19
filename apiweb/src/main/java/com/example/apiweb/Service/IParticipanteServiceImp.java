@@ -27,6 +27,7 @@ public class IParticipanteServiceImp implements IParticipanteService{
     public List<ParticipanteModel> listarParticipantes() {
         return participanteRepository.findAll();
     }
+    @SuppressWarnings("unused")
     @Override
     public String eliminarParticipantePorId(int idParticipante) {
         Optional<ParticipanteModel> participanteRecuperado = participanteRepository.findById(idParticipante);
@@ -64,6 +65,10 @@ public class IParticipanteServiceImp implements IParticipanteService{
     @Override
     public List<ParticipanteModel> mostrarInternoNoLider() {
       return  this.participanteRepository.buscarInternoNoLider();
+    }
+    @Override
+    public List<ParticipanteModel> buscarExterno() {
+        return this.participanteRepository.mostrarExterno();
     }
     
 }

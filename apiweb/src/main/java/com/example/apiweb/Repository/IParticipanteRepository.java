@@ -15,6 +15,6 @@ public interface IParticipanteRepository extends JpaRepository<ParticipanteModel
     List<ParticipanteModel> buscarInternoNoLider();
     @Query (value = "SELECT * "+
             "FROM Participante "+ 
-            "WHERE tipoParticipante = 'externo'")
-    List<ParticipanteModel> buscarExterno();
+            "WHERE tipoParticipante = 'externo'", nativeQuery = true)
+    List<ParticipanteModel> mostrarExterno();
 }

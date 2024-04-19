@@ -32,6 +32,7 @@ public class IProyectoServiceImp implements IProyectoService{
         return proyectoRepository.findAll();
     }
 
+    @SuppressWarnings("unused")
     @Override
     public String eliminarProyectoPorId(int idProyecto) {
         Optional<ProyectoModel> proyectoRecuperado = proyectoRepository.findById(idProyecto);

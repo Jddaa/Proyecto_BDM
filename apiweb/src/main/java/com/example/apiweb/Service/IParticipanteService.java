@@ -11,5 +11,6 @@ public interface IParticipanteService {
     String eliminarParticipantePorId(int idParticipante);
     String actualizarParticipante(int idParticipante, ParticipanteModel detallesparticipante);
     List<ParticipanteModel> mostrarInternoNoLider();
+    List<ParticipanteModel> buscarExterno();
     //otras cosas
 }

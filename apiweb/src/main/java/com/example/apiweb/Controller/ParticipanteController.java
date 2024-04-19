@@ -66,5 +66,9 @@ public class ParticipanteController {
         List<ParticipanteModel> listaInternos = participanteService.mostrarInternoNoLider();
         return new ResponseEntity <List<ParticipanteModel>>(listaInternos, HttpStatus.OK);
     }
-
+    @GetMapping("/Q2")
+    public ResponseEntity<List<ParticipanteModel>> participantesExternos(){
+        List<ParticipanteModel> listaExternos = participanteService.buscarExterno();
+        return new ResponseEntity <List<ParticipanteModel>>(listaExternos, HttpStatus.OK);
+    }
 }
